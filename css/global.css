@@ -1,0 +1,49 @@
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: #d9534f;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 12%;
+    bottom: 33rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-header button {
+    all: unset;
+    background: #d9534f;
+    color: white;
+    padding: .5rem;
+}
+
+.sr-only {
+    display: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 40px !important;
+}
+
+img {
+    width: 50%;
+}
+
+.modal-body .text-center img {
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 230px;
+    }
+}
