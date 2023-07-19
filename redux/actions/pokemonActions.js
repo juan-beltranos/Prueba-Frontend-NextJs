@@ -35,7 +35,7 @@ export const fetchPokemonElement = (element) => {
         const results = response.data.results;
         const pokemonList = results.map((pokemon) => {
           const id = pokemon.url.split('/')[6];
-          const picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`;
+          const picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
           return { ...pokemon, url: picture };
         });
         dispatch(setPokemonList(pokemonList));
@@ -46,7 +46,7 @@ export const fetchPokemonElement = (element) => {
         const pokemonList = results.map((pokemonElement) => {
           const { pokemon } = pokemonElement
           const id = pokemon.url.split('/')[6];
-          const picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`;
+          const picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
           return { ...pokemon, url: picture };
         });
         dispatch(setFilteredPokemonList(pokemonList));

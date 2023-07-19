@@ -14,7 +14,7 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
     <Modal show={showModal} onHide={handleCloseModal}>
       {isLoading ? (
         <Modal.Body>
-          <p>Cargandoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>Cargando...</p>
         </Modal.Body>
       ) : (
         <>
