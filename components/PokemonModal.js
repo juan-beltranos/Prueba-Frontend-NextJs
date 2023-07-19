@@ -35,7 +35,7 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
             </div>
 
             <div className='d-flex justify-content-evenly'>
-              <p className='fw-bold'>Altura: {selectedPokemon.height}&quot;gi</p>
+              <p className='fw-bold'>Altura: {selectedPokemon.height}&quot;</p>
               <p className='fw-bold'>Peso: {selectedPokemon.weight}Lb</p>
             </div>
 
