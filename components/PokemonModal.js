@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { usePalette } from 'react-palette'
 
 const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSelectPokemon, handleDiscardPokemon }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [picture, setPicture] = useState('');
 
   useEffect(() => {
     if (selectedPokemon) {
-      setIsLoading(false); 
+      setIsLoading(false);
+      setPicture(selectedPokemon.sprites.other['official-artwork'].front_default)
     }
   }, [selectedPokemon]);
+
+  const { data } = usePalette(picture)
+
+
 
   return (
     <Modal show={showModal} onHide={handleCloseModal}>
@@ -18,10 +25,10 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
         </Modal.Body>
       ) : (
         <>
-          <Modal.Header closeButton>
+          <Modal.Header closeButton  style={{ backgroundColor: data.lightVibrant, color: 'black' }}>
             <Modal.Title>{selectedPokemon.name}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body style={{ backgroundColor: data.lightVibrant, color: 'black' }} >
             <div className='text-center'>
               <img
                 src={selectedPokemon.sprites.other['official-artwork'].front_default}
@@ -30,8 +37,8 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
             </div>
 
             <div className='d-flex justify-content-evenly'>
-              <p className='fw-bold'>Altura: {selectedPokemon.height}</p>
-              <p className='fw-bold'>Peso: {selectedPokemon.weight}kg</p>
+              <p className='fw-bold'>Altura: {selectedPokemon.height}"</p>
+              <p className='fw-bold'>Peso: {selectedPokemon.weight}Lb</p>
             </div>
 
             <p className='mb-0 fw-bold'>Sprites:</p>
@@ -52,13 +59,13 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
             </div>
 
             <p className='fw-bold'>Elementos:</p>
-            <ul>
+            <ul className='d-flex gap-5'>
               {selectedPokemon.types.map((type) => (
                 <li key={type.slot}>{type.type.name}</li>
               ))}
             </ul>
           </Modal.Body>
-          <Modal.Footer>
+          <Modal.Footer style={{ backgroundColor: data.lightVibrant, color: 'black' }}>
             <Button variant="danger" onClick={handleDiscardPokemon}>
               Descartar
             </Button>

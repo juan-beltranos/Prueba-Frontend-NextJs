@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const PokemonCarousel = ({ filteredPokemonList, handleShowModal, isPokemonSelected, isPokemonViewed }) => {
+
   return (
     <Carousel>
       {filteredPokemonList.map((pokemon, index) => (

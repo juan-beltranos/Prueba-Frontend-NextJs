@@ -1,4 +1,10 @@
 /* Carousel */
+/* .carousel-item {
+    background-image: url('../public/img/poke.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
 .carousel-control-next,
 .carousel-control-prev {
     background-color: #d9534f;
