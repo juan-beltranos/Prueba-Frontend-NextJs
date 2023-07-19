@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Image from 'next/image';
 import axios from 'axios';
 
 //Redux
@@ -80,13 +81,17 @@ const Home = () => {
 
   return (
     <div className='container p-5'>
-      <h1>Pokémon Slider</h1>
+
+      <div className='d-flex align-items-center justify-content-center mb-4'>
+        <Image src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" alt="pokeball" className="pokeball" width={50} height={50} />
+        <h1 className='mb-0'>Pokémon App</h1>
+      </div>
 
       <PokemonSelector
         selectedType={selectedType}
         handleTypeChange={handleTypeChange}
       />
-      
+
       <br />
 
       <PokemonCarousel

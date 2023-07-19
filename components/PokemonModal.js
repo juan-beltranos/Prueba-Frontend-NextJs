@@ -16,13 +16,15 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
               />
             </div>
 
-            <p className='fw-bold'>Height: {selectedPokemon.height}</p>
-            <p className='fw-bold'>Weight: {selectedPokemon.weight}</p>
+            <div className='d-flex justify-content-evenly'>
+              <p className='fw-bold'>Altura: {selectedPokemon.height}</p>
+              <p className='fw-bold'>Peso: {selectedPokemon.weight}kg</p>
+            </div>
 
             <p className='mb-0 fw-bold'>Sprites:</p>
 
             <div className='d-flex justify-content-evenly'>
-              <img
+              <ima
                 src={selectedPokemon.sprites.front_default}
                 alt={selectedPokemon.name}
               />
@@ -36,7 +38,7 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
               />
             </div>
 
-            <p className='fw-bold'>Types:</p>
+            <p className='fw-bold'>Elementos:</p>
             <ul>
               {selectedPokemon.types.map((type) => (
                 <li key={type.slot}>{type.type.name}</li>
@@ -44,7 +46,7 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
             </ul>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleDiscardPokemon}>
+            <Button variant="danger" onClick={handleDiscardPokemon}>
               Descartar
             </Button>
             <Button variant="primary" onClick={handleSelectPokemon}>

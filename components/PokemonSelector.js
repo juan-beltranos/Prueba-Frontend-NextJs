@@ -1,11 +1,11 @@
 import { Form } from 'react-bootstrap';
 
-const PokemonSelector = ({ selectedType, handleTypeChange }) => {
+const PokemonSelector = ({ handleTypeChange }) => {
   return (
-    <Form.Group controlId="pokemonType">
-      <Form.Label>Selecciona un tipo:</Form.Label>
-      <Form.Control as="select" onChange={handleTypeChange} value={selectedType}>
-        <option value="">Todos los tipos</option>
+    <Form.Group controlId="">
+      <Form.Label>Selecciona un elemento:</Form.Label>
+      <Form.Control as="select" onChange={handleTypeChange} >
+        <option value="">Todos los elementos</option>
         <option value="fire">Fuego</option>
         <option value="water">Agua</option>
         <option value="ground">Tierra</option>

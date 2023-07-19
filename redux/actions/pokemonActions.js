@@ -31,7 +31,15 @@ export const fetchPokemonElement = (element) => {
   return async (dispatch) => {
     try {
       if (element === '') {
-        fetchPokemon()
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=50&order=desc');
+        const results = response.data.results;
+        const pokemonList = results.map((pokemon) => {
+          const id = pokemon.url.split('/')[6];
+          const picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`;
+          return { ...pokemon, url: picture };
+        });
+        dispatch(setPokemonList(pokemonList));
+        dispatch(setFilteredPokemonList(pokemonList));
       } else {
         const response = await axios.get(`https://pokeapi.co/api/v2/type/${element}?limit=50`);
         const results = response.data.pokemon;
