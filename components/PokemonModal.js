@@ -1,9 +1,22 @@
+import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSelectPokemon, handleDiscardPokemon }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (selectedPokemon) {
+      setIsLoading(false); 
+    }
+  }, [selectedPokemon]);
+
   return (
     <Modal show={showModal} onHide={handleCloseModal}>
-      {selectedPokemon && (
+      {isLoading ? (
+        <Modal.Body>
+          <p>Cargandoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </Modal.Body>
+      ) : (
         <>
           <Modal.Header closeButton>
             <Modal.Title>{selectedPokemon.name}</Modal.Title>
@@ -24,7 +37,7 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
             <p className='mb-0 fw-bold'>Sprites:</p>
 
             <div className='d-flex justify-content-evenly'>
-              <ima
+              <img
                 src={selectedPokemon.sprites.front_default}
                 alt={selectedPokemon.name}
               />

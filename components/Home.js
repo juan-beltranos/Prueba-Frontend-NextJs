@@ -110,7 +110,10 @@ const Home = () => {
         handleDiscardPokemon={handleDiscardPokemon}
       />
 
-      <SelectedPokemonList selectedPokemons={selectedPokemons} />
+      <SelectedPokemonList
+        selectedPokemons={selectedPokemons}
+        handleShowModal={handleShowModal}
+      />
 
     </div>
   );

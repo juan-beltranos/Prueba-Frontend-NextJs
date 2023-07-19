@@ -9,6 +9,8 @@ const PokemonSelector = ({ handleTypeChange }) => {
         <option value="fire">Fuego</option>
         <option value="water">Agua</option>
         <option value="ground">Tierra</option>
+        <option value="electric">Electrico</option>
+        <option value="ice">Hielo</option>
       </Form.Control>
     </Form.Group>
   );
