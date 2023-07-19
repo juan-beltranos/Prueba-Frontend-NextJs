@@ -5,6 +5,7 @@ import { usePalette } from 'react-palette'
 const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSelectPokemon, handleDiscardPokemon }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [picture, setPicture] = useState('');
+  const { data } = usePalette(picture)
 
   useEffect(() => {
     if (selectedPokemon) {
@@ -12,9 +13,6 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
       setPicture(selectedPokemon.sprites.other['official-artwork'].front_default)
     }
   }, [selectedPokemon]);
-
-  const { data } = usePalette(picture)
-
 
 
   return (
@@ -37,7 +35,7 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
             </div>
 
             <div className='d-flex justify-content-evenly'>
-              <p className='fw-bold'>Altura: {selectedPokemon.height}"</p>
+              <p className='fw-bold'>Altura: {selectedPokemon.height}&quot;gi</p>
               <p className='fw-bold'>Peso: {selectedPokemon.weight}Lb</p>
             </div>
 
