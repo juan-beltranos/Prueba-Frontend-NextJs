@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import { usePalette } from 'react-palette'
-import { useSelector } from 'react-redux';
+// import { usePalette } from 'react-palette'
 
 const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSelectPokemon, handleDiscardPokemon }) => {
   const [isLoading, setIsLoading] = useState(true);
