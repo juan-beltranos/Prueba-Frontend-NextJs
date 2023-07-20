@@ -108,6 +108,7 @@ const Home = () => {
         selectedPokemon={selectedPokemon}
         handleSelectPokemon={handleSelectPokemon}
         handleDiscardPokemon={handleDiscardPokemon}
+        selectedPokemons={selectedPokemons}
       />
 
       <SelectedPokemonList

@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 const PokemonCarousel = ({ filteredPokemonList, handleShowModal, isPokemonSelected, isPokemonViewed }) => {
 
   return (
-    <Carousel>
+    <Carousel className='shadow rounded-3' style={{cursor: 'pointer'}}>
       {filteredPokemonList.map((pokemon, index) => (
         <Carousel.Item
           key={index}
