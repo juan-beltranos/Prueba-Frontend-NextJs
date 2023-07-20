@@ -164,10 +164,17 @@ svg {
 
 }
 
+@media (min-width: 820px) {
+    .pokemon-container-list {
+        height: 440px;
+        overflow-y: scroll;
+    }
+}
+
 @media (min-width: 990px) {
 
     .carousel-item img {
-        width: 45%;
+        width: 33%;
     }
 
     svg {
