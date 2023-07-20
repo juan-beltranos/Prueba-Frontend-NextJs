@@ -80,7 +80,7 @@ const Home = () => {
   };
 
   return (
-    <div className='container p-5'>
+    <div className='container p-2'>
 
       <div className='d-flex align-items-center justify-content-center mb-4'>
         <Image src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" alt="pokeball" className="pokeball" width={50} height={50} />

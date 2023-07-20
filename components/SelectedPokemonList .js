@@ -7,7 +7,7 @@ const SelectedPokemonList = ({ selectedPokemons, handleShowModal }) => {
                 <p ></p>
             ) : (
                 <>
-                    <h2 className='text-center fs-2'>Pokémon Atrapados:</h2>
+                    {/* <h2 className='text-center fs-2'>Pokémon Atrapados:</h2> */}
                     <ul className="grid-pokemon p-0" >
                         {selectedPokemons.map((pokemon) => (
                             <div key={pokemon.name} onClick={() => handleShowModal(pokemon.name)}>

@@ -2,17 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 // import { usePalette } from 'react-palette'
 
-const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSelectPokemon, handleDiscardPokemon }) => {
+const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSelectPokemon, handleDiscardPokemon, selectedPokemons }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [pokemonInclude, setPokemonInclude] = useState(true);
   // const [picture, setPicture] = useState('');
   // const { data } = usePalette(picture)
 
   useEffect(() => {
     if (selectedPokemon) {
       setIsLoading(false);
+      pokemonDuplicate(selectedPokemons);
       // setPicture(selectedPokemon.sprites.other['official-artwork'].front_default)
     }
   }, [selectedPokemon]);
+
+  const pokemonDuplicate = (selectedPokemons) => {
+    return setPokemonInclude(selectedPokemons.some(pokemon => pokemon.name === selectedPokemon.name))
+  }
 
   return (
     <Modal show={showModal} onHide={handleCloseModal}>
@@ -68,9 +74,11 @@ const PokemonModal = ({ showModal, handleCloseModal, selectedPokemon, handleSele
             <Button variant="danger" onClick={handleDiscardPokemon}>
               Descartar
             </Button>
-            <Button variant="primary" onClick={handleSelectPokemon}>
-              Seleccionar
-            </Button>
+            {
+              !pokemonInclude && <Button variant="primary" onClick={handleSelectPokemon}>
+                Seleccionar
+              </Button>
+            }
           </Modal.Footer>
         </>
       )}
