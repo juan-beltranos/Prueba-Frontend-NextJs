@@ -39,6 +39,7 @@ export const fetchPokemonElement = (element) => {
           return { ...pokemon, url: picture };
         });
         dispatch(setPokemonList(pokemonList));
+        dispatch(setSelectedType(element));
         dispatch(setFilteredPokemonList(pokemonList));
       } else {
         const response = await axios.get(`https://pokeapi.co/api/v2/type/${element}?limit=50`);
@@ -50,6 +51,7 @@ export const fetchPokemonElement = (element) => {
           return { ...pokemon, url: picture };
         });
         dispatch(setFilteredPokemonList(pokemonList));
+        dispatch(setSelectedType(element));
       }
 
     } catch (error) {
