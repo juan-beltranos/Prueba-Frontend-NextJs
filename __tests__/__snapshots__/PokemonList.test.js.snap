@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selected Pokemons state 1`] = `
+<div
+  className="mt-3 pokemon-container-list"
+>
+  <ul
+    className="grid-pokemon p-0"
+  >
+    <div
+      onClick={[Function]}
+    >
+      <li
+        className="d-flex align-items-center card-pokemon shadow rounded"
+      >
+        <img
+          alt="pokeball"
+          className="pokeball"
+          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
+        />
+        <img
+          alt="ivysaur"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+        />
+        ivysaur
+      </li>
+    </div>
+    <div
+      onClick={[Function]}
+    >
+      <li
+        className="d-flex align-items-center card-pokemon shadow rounded"
+      >
+        <img
+          alt="pokeball"
+          className="pokeball"
+          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
+        />
+        <img
+          alt="sandslash"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png"
+        />
+        sandslash
+      </li>
+    </div>
+  </ul>
+</div>
+`;

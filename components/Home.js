@@ -68,7 +68,7 @@ const Home = () => {
   };
 
   const isPokemonSelected = (pokemon) => {
-    return selectedPokemons.some((selectedPokemon) => selectedPokemon.name === pokemon.name);
+    return selectedPokemons?.some((selectedPokemon) => selectedPokemon.name === pokemon.name) ?? null;
   };
 
   const isPokemonDiscarded = (pokemon) => {

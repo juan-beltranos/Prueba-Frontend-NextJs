@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { Carousel } from 'react-bootstrap';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-const PokemonCarousel = ({ filteredPokemonList, handleShowModal, isPokemonSelected, isPokemonViewed }) => {
+const PokemonCarousel = ({ filteredPokemonList, handleShowModal, isPokemonViewed, isPokemonSelected }) => {
 
   return (
-    <Carousel className='shadow rounded-3' style={{cursor: 'pointer'}}>
+    <Carousel className='shadow rounded-3' style={{ cursor: 'pointer' }}>
       {filteredPokemonList.map((pokemon, index) => (
         <Carousel.Item
           key={index}

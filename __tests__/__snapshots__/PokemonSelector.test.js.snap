@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selected Pokemons state 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="fw-bold fs-2 form-label"
+  >
+    Selecciona un elemento y escoge tu Pokémon:
+  </label>
+  <select
+    className="shadow bg-white rounded-3 fs-4 form-control"
+    onChange="fire"
+  >
+    <option
+      value=""
+    >
+      Todos los elementos
+    </option>
+    <option
+      value="fire"
+    >
+      Fuego
+    </option>
+    <option
+      value="water"
+    >
+      Agua
+    </option>
+    <option
+      value="ground"
+    >
+      Tierra
+    </option>
+    <option
+      value="electric"
+    >
+      Electrico
+    </option>
+    <option
+      value="ice"
+    >
+      Hielo
+    </option>
+  </select>
+</div>
+`;
