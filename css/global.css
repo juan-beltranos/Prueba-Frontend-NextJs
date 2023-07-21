@@ -1,10 +1,12 @@
 body {
-    background-image: url('../public/img/fondo.jpg');
+    background-image: url(/_next/static/media/fondo.901f129f.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    background-color: #7DAD71;
     color: white;
 }
 
